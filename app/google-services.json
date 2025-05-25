@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "519222722952",
+    "project_id": "shapeonyou-b47de",
+    "storage_bucket": "shapeonyou-b47de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519222722952:android:5c95bb39e73b1de5d53a3d",
+        "android_client_info": {
+          "package_name": "com.example.shapeonyou"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR_WW5vQGEu13dc1Y0p8iAvR1PfX7DfDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
