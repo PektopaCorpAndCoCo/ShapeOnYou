@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Ligne du haut avec l’icône, le texte et la cloche -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Icône utilisateur -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_user"
+            android:contentDescription="Icône utilisateur" />
+
+        <!-- Texte Bonjour, user -->
+        <TextView
+            android:id="@+id/helloText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour, user"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Espace flexible -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Icône notification -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bell"
+            android:contentDescription="Icône notification" />
+
+        <!-- Barre de navigation en bas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp">
+
+            <!-- Icône Favoris -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_favorite"
+                android:contentDescription="Favoris"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+
+            <!-- Icône Progression -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_progress"
+                android:contentDescription="Progression"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+
+            <!-- Icône Profil -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_user"
+                android:contentDescription="Profil"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
