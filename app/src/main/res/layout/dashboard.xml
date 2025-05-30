@@ -31,16 +31,18 @@
             android:layout_marginStart="8dp"
             android:layout_gravity="center_vertical" />
 
-
-        <!-- Icône notification -->
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_bell"
-            android:contentDescription="Icône notification" />
+            android:contentDescription="Icône notification"
+            android:src="@drawable/ic_bell" />
+
+
+        <!-- Icône notification -->
     </LinearLayout>
 
     <!-- 🔹 Ligne de titre : "Mes entraînements" / "Voir tout" -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,7 +62,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Voir tout"
-            android:textColor="#007BFF"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -184,7 +185,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Voir tout"
-            android:textColor="#007BFF"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -208,18 +208,18 @@
                 android:orientation="vertical"
                 android:layout_marginEnd="12dp">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/breakfast"
-                    android:scaleType="centerCrop" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Petit déjeuner"
                     android:textAlignment="center"
                     android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/breakfast" />
             </LinearLayout>
 
             <!-- lunch -->
@@ -287,57 +287,23 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-
-    <!-- pour posser les footers en bas -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 
-    <!-- Barre de navigation en bas -->
-    <LinearLayout
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_gravity="bottom"
-        android:padding="16dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
-
-        <!-- Icône Favoris -->
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_favorite"
-            android:contentDescription="Favoris"
-            android:layout_weight="1"
-            android:layout_gravity="center" />
-
-        <!-- Icône Progression -->
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_progress"
-            android:contentDescription="Progression"
-            android:layout_weight="1"
-            android:layout_gravity="center" />
-
-        <!-- Icône Profil -->
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_user"
-            android:contentDescription="Profil"
-            android:layout_weight="1"
-            android:layout_gravity="center" />
-    </LinearLayout>
-
+        android:background="@color/header_footer_blue"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
 
 
 
