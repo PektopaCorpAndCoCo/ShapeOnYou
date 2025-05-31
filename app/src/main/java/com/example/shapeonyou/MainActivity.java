@@ -16,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.dashboard);
         //setContentView(R.layout.activity_main);
+
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.topAppBar);
+        setSupportActionBar(toolbar);
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.dashboard), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

@@ -6,40 +6,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Ligne du haut avec l’icône, le texte et la cloche -->
-    <LinearLayout
+    <!--header!-->
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content">
 
-        <!-- Icône utilisateur -->
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_user"
-            android:contentDescription="Icône utilisateur" />
-
-        <!-- Texte Bonjour, user -->
-        <TextView
-            android:id="@+id/helloText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bonjour, user"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp"
-            android:layout_gravity="center_vertical" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="Icône notification"
-            android:src="@drawable/ic_bell" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/shape_on_you"
+            app:titleCentered="true"
+            android:paddingStart="46dp"
+            android:background="@color/header_footer_blue"
+            android:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_user"
+            app:menu="@menu/top_app_bar_menu" />
+    </com.google.android.material.appbar.AppBarLayout>
 
 
-        <!-- Icône notification -->
-    </LinearLayout>
 
     <!-- 🔹 Ligne de titre : "Mes entraînements" / "Voir tout" -->
 
