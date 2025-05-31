@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--header!-->
-
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +15,12 @@
         android:padding="12dp"
         android:background="@color/footer">
 
-        <!-- Icône gauche (profil) -->
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_user"
             android:contentDescription="Profil" />
 
-        <!-- Titre centré -->
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -34,7 +31,6 @@
             android:textStyle="bold"
             android:textSize="18sp" />
 
-        <!-- Icône droite (notification) -->
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -42,11 +38,7 @@
             android:contentDescription="Notification" />
     </LinearLayout>
 
-
-
-
-    <!-- 🔹 Ligne de titre : "Mes entraînements" / "Voir tout" -->
-
+    <!-- Titre section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,125 +61,167 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <!-- 📸 Scroll horizontal des 4 entraînements -->
-    <HorizontalScrollView
+    <!-- Cartes Entraînement -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:scrollbars="none">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
 
+        <!-- Ligne 1 : Card 1 + Card 2 -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
 
-            <!-- 🖼️ Entraînement 1 -->
+            <!-- Card 1 -->
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <ImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/complet"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/complet" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Corps Complet"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dp" />
             </LinearLayout>
 
-            <!-- Entraînement 2 -->
+            <!-- Card 2 -->
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <ImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/haut"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/haut" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="haut du corps"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:text="Haut du corps"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dp" />
             </LinearLayout>
+        </LinearLayout>
 
-            <!-- Entraînement 3 -->
+        <!-- Ligne 2 : Card 3 + Card 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Card 3 -->
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <ImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/abdos"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/abdos" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Abdos"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dp" />
             </LinearLayout>
 
-            <!-- Entraînement 4 -->
+            <!-- Card 4 -->
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/bas"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bas" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Bas du corps"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingTop="4dp" />
             </LinearLayout>
-
         </LinearLayout>
-    </HorizontalScrollView>
+    </LinearLayout>
 
-
-
-
+    <!-- Espace vide pour pousser le footer en bas -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-
-
-
-    <!--footer-->
-
+    <!-- Footer -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/bottom_navigation"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:menu="@menu/bottom_navigation_menu" />
-
-
-
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </LinearLayout>
