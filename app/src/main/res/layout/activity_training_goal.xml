@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gradient_background"> <!-- ✅ Dégradé appliqué -->
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUEL EST VOTRE OBJECTIF PRINCIPAL\nPOUR L'ENTRAÎNEMENT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <RadioGroup
+        android:id="@+id/rgGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbMass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prise de masse"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbLoss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perte de poids"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbTone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tonicité"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTINUER"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:backgroundTint="#F44336" />
+</LinearLayout>
