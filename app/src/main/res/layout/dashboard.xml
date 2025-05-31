@@ -8,22 +8,40 @@
 
     <!--header!-->
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="@color/footer">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:title="@string/shape_on_you"
-            app:titleCentered="true"
-            android:paddingStart="46dp"
-            android:background="@color/header_footer_blue"
-            android:titleTextColor="@android:color/white"
-            app:navigationIcon="@drawable/ic_user"
-            app:menu="@menu/top_app_bar_menu" />
-    </com.google.android.material.appbar.AppBarLayout>
+        <!-- Icône gauche (profil) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_user"
+            android:contentDescription="Profil" />
+
+        <!-- Titre centré -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shape On You"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <!-- Icône droite (notification) -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bell"
+            android:contentDescription="Notification" />
+    </LinearLayout>
+
 
 
 
@@ -151,127 +169,7 @@
     </HorizontalScrollView>
 
 
-    <!-- 🔹 Ligne de titre : "Ma nutution " / "Voir tout" -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nutrition"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Voir tout"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <!-- 📸 Scroll horizontal des 4 repas  -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!-- breakfast -->
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Petit déjeuner"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/breakfast" />
-            </LinearLayout>
-
-            <!-- lunch -->
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/lunch"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Déjeuner"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <!-- dinner -->
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="12dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/dinner"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Diner"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <!-- snack -->
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:src="@drawable/snack"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Snack"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </HorizontalScrollView>
 
     <View
         android:layout_width="match_parent"
