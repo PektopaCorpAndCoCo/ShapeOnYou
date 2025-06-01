@@ -19,6 +19,10 @@
         <activity android:name=".UpActivity" />
         <activity android:name=".AbdosActivity" />
         <activity android:name=".DownActivity" />
+        <activity android:name=".NutritionActivity" />
+        <activity android:name=".FavorisActivity" />
+        <activity android:name=".SuiviActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

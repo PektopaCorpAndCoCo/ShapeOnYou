@@ -10,6 +10,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -59,6 +62,23 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
             startActivity(intent);
         });
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.nutrition:
+                    startActivity(new Intent(MainActivity.this, NutritionActivity.class));
+                    return true;
+                case R.id.favoris:
+                    startActivity(new Intent(MainActivity.this, FavorisActivity.class));
+                    return true;
+                case R.id.progress:
+                    startActivity(new Intent(MainActivity.this, SuiviActivity.class));
+                    return true;
+            }
+            return false;
+        });
+
 
     }
 
