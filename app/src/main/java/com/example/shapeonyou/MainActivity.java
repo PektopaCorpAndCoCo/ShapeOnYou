@@ -65,19 +65,22 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nutrition:
-                    startActivity(new Intent(MainActivity.this, NutritionActivity.class));
-                    return true;
-                case R.id.favoris:
-                    startActivity(new Intent(MainActivity.this, FavorisActivity.class));
-                    return true;
-                case R.id.progress:
-                    startActivity(new Intent(MainActivity.this, SuiviActivity.class));
-                    return true;
+            int id = item.getItemId();
+
+            if (id == R.id.nutrition) {
+                startActivity(new Intent(MainActivity.this, NutritionActivity.class));
+                return true;
+            } else if (id == R.id.favoris) {
+                startActivity(new Intent(MainActivity.this, FavorisActivity.class));
+                return true;
+            } else if (id == R.id.progress) {
+                startActivity(new Intent(MainActivity.this, SuiviActivity.class));
+                return true;
             }
+
             return false;
         });
+
 
 
     }
