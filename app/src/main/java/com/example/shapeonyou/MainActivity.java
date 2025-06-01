@@ -1,6 +1,8 @@
 package com.example.shapeonyou;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,5 +23,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView userIcon = findViewById(R.id.ic_user);
+        userIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
+            startActivity(intent);
+        });
+
     }
+
+
 }
