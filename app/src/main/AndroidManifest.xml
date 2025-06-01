@@ -15,6 +15,10 @@
 
         <activity android:name=".ProfilActivity" />
         <activity android:name=".NotificationActivity" />
+        <activity android:name=".FullActivity" />
+        <activity android:name=".UpActivity" />
+        <activity android:name=".AbdosActivity" />
+        <activity android:name=".DownActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

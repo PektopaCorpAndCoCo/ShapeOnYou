@@ -99,10 +99,14 @@
                     app:cardElevation="4dp">
 
                     <ImageView
+                        android:id="@+id/hall"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/complet" />
+                        android:src="@drawable/complet"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Image entraînement corps complet"/>
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
@@ -130,10 +134,14 @@
                     app:cardElevation="4dp">
 
                     <ImageView
+                        android:id="@+id/up"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/haut" />
+                        android:src="@drawable/haut"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Image entraînement haut du corps "/>
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
@@ -147,13 +155,14 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Ligne 2 : Card 3 + Card 4 -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
 
+            <!-- Card 3 -->
             <!-- Card 3 -->
             <LinearLayout
                 android:layout_width="0dp"
@@ -169,10 +178,14 @@
                     app:cardElevation="4dp">
 
                     <ImageView
+                        android:id="@+id/abdos"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/abdos" />
+                        android:src="@drawable/abdos"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Image entraînement des abdos"/>
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView
@@ -182,8 +195,9 @@
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:paddingTop="4dp" />
+                    android:paddingTop="4dp"/>
             </LinearLayout>
+
 
             <!-- Card 4 -->
             <LinearLayout
@@ -200,10 +214,14 @@
                     app:cardElevation="4dp">
 
                     <ImageView
+                        android:id="@+id/down"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/bas" />
+                        android:src="@drawable/bas"
+                        android:contentDescription="Image entraînement du bas du corps"/>
                 </com.google.android.material.card.MaterialCardView>
 
                 <TextView

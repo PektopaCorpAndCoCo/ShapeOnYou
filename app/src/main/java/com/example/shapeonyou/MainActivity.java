@@ -36,6 +36,30 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        ImageView fullImage = findViewById(R.id.hall);
+        fullImage.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView basImage = findViewById(R.id.down);
+        basImage.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView UpImage = findViewById(R.id.up);
+        UpImage.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView abdosImage = findViewById(R.id.abdos);
+        abdosImage.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            startActivity(intent);
+        });
+
     }
 
 
