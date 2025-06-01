@@ -6,6 +6,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
+        <!-- Activité de lancement (Login) -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -14,7 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!-- … autres activités … -->
+
+        <!-- Déclaration de SignupActivity -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+
+        <!-- Déclaration de MainActivity (si vous l’utilisez ailleurs) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <!-- Ajoutez ici d’autres activités si besoin :
+        <activity android:name=".UneAutreActivity" />
+         -->
+
     </application>
 </manifest>
-
