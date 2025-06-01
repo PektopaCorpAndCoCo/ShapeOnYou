@@ -35,9 +35,12 @@
             android:textSize="18sp" />
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/ic_bell"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:src="@drawable/ic_bell"
+            android:clickable="true"
+            android:focusable="true"
             android:contentDescription="Notification" />
     </LinearLayout>
 

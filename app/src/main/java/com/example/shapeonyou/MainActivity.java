@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        ImageView bellIcon = findViewById(R.id.ic_bell);
+        bellIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            startActivity(intent);
+        });
+
     }
 
 
