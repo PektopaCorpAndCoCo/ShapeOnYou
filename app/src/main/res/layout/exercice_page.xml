@@ -6,7 +6,7 @@
     android:id="@+id/exercice_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExercicePage">
+    tools:context=".ExercicePageActivity">
 
     <!-- VideoView taking 50% of screen height -->
     <VideoView
