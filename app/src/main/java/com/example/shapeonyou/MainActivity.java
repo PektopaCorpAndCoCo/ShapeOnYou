@@ -41,25 +41,25 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView fullImage = findViewById(R.id.hall);
         fullImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            Intent intent = new Intent(MainActivity.this, FullActivity.class);
             startActivity(intent);
         });
 
         ImageView basImage = findViewById(R.id.down);
         basImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            Intent intent = new Intent(MainActivity.this, DownActivity.class);
             startActivity(intent);
         });
 
         ImageView UpImage = findViewById(R.id.up);
         UpImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            Intent intent = new Intent(MainActivity.this, UpActivity.class);
             startActivity(intent);
         });
 
         ImageView abdosImage = findViewById(R.id.abdos);
         abdosImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
+            Intent intent = new Intent(MainActivity.this, AbdosActivity.class);
             startActivity(intent);
         });
 
