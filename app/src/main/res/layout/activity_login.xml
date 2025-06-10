@@ -4,134 +4,117 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@drawable/bg_gradient">
 
-    <!-- Triangle responsive centré en haut -->
-    <ImageView
-        android:id="@+id/bg_triangle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/bg_triangle"
-        android:scaleType="centerCrop"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <!-- 1. Connexion -->
 
-    <!-- Formulaire LOGIN -->
-    <LinearLayout
-        android:id="@+id/form_container"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/form_border"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/bg_triangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="0dp">
+    <!-- 2. Label Email -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="8dp"/>
+    <!-- 3. Champ Email -->
 
-        <!-- Email -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingVertical="8dp">
+    <!-- 4. Label Mot de passe -->
 
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="→ Email"
-                android:background="@null"
-                android:textColorHint="#757575"
-                android:textSize="16sp"/>
+    <!-- 5. Champ Mot de passe -->
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_person" />
-        </LinearLayout>
+    <!-- 6. Invitation à l’inscription -->
 
-        <!-- Password -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingVertical="8dp">
-
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="→ Password"
-                android:inputType="textPassword"
-                android:background="@null"
-                android:textColorHint="#757575"
-                android:textSize="16sp"/>
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_lock" />
-        </LinearLayout>
-
-        <!-- Forgot Password -->
-        <TextView
-            android:id="@+id/btnForgot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:textColor="#1EB8FE"
-            android:textSize="14sp"
-            android:layout_gravity="start"
-            android:paddingTop="4dp"/>
-    </LinearLayout>
-
-    <!-- Bouton LOGIN -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_blue"
-        android:text="Login"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background"
+        android:text="connexion"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/form_container"
-        app:layout_constraintStart_toStartOf="@id/form_container"
-        app:layout_constraintEnd_toEndOf="@id/form_container"/>
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="160dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Bouton SIGN UP (pour naviguer vers l’inscription) -->
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btn_blue"
-        android:text="Sign Up"
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Email"
         android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="@id/btnLogin"
-        app:layout_constraintEnd_toEndOf="@id/btnLogin"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="100dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Entrez votre e-mail"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel" />
+
+    <TextView
+        android:id="@+id/tvPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Mot de passe"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="100dp"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Entrez votre mot de passe"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel" />
+
+    <!-- 7. “Rejoins-nous” -->
+
+    <TextView
+        android:id="@+id/tvSignupPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="480dp"
+        android:text="Pas encore inscrit·e?"
+        android:textSize="16sp"
+        app:layout_constraintBottom_margin="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSignUp"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rejoins-nous"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSignupPrompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_margin="32dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
