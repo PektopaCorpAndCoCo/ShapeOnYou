@@ -35,11 +35,18 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> {
             String email = etEmail.getText().toString().trim();
             String pwd   = etPassword.getText().toString();
+            if (email.isEmpty() && pwd.isEmpty()) {
+                Toast.makeText(this, "Veuillez entrer votre email et votre mot de passe", Toast.LENGTH_SHORT).show();
+                return;
+            }
             authHelper.signIn(email, pwd, task -> {
+
                 if (task.isSuccessful()) {
                     startActivity(new Intent(this, MainActivity.class));
                     finish();
-                } else {
+
+                }
+                else {
                     Toast.makeText(this,
                             "Échec de la connexion : " + task.getException().getMessage(),
                             Toast.LENGTH_LONG).show();
@@ -47,23 +54,25 @@ public class LoginActivity extends AppCompatActivity {
             });
         });
 
-        btnForgot.setOnClickListener(v -> {
-            String email = etEmail.getText().toString().trim();
-            authHelper.resetPassword(email, task -> {
-                if (task.isSuccessful()) {
-                    Toast.makeText(this,
-                            "Email de réinitialisation envoyé",
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(this,
-                            "Erreur : " + task.getException().getMessage(),
-                            Toast.LENGTH_LONG).show();
-                }
-            });
-        });
 
         btnSignUp.setOnClickListener(v ->
                 startActivity(new Intent(this, SignupActivity.class))
         );
+
+        btnForgot.setOnClickListener(v -> {
+            // Action pour le mot de passe oublié
+            String email = etEmail.getText().toString().trim();
+            if (email.isEmpty()) {
+                Toast.makeText(this, "Veuillez entrer votre email", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            authHelper.resetPassword(email, task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(this, "Email de réinitialisation envoyé", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Erreur : " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+        });
     }
 }
