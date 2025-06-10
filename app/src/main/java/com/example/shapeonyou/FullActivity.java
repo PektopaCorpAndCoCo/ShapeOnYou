@@ -25,6 +25,13 @@ public class FullActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.btn_retour).setOnClickListener(v -> {
+            Intent intent = new Intent(FullActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // facultatif : pour éviter de revenir à FullActivity avec le bouton back
+            startActivity(intent);
+        });
+
+
 
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
