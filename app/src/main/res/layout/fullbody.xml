@@ -38,6 +38,199 @@
             android:textSize="16sp" />
     </LinearLayout>
 
+    <!-- Carte exercice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Boîte pour l’image (placeholder vide) -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#E0E0E0"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Texte de la carte -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOM EXERCICE"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="durée · niveau de diffuculté · equipement · repetition"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Ligne de séparation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Carte exercice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Boîte pour l’image (placeholder vide) -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#E0E0E0"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Texte de la carte -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOM EXERCICE"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="durée · niveau de diffuculté · equipement · repetition"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Ligne de séparation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+
+    <!-- Carte exercice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Boîte pour l’image (placeholder vide) -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#E0E0E0"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Texte de la carte -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOM EXERCICE"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="durée · niveau de diffuculté · equipement · repetition"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Ligne de séparation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Carte exercice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@android:color/white">
+
+        <!-- Boîte pour l’image (placeholder vide) -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#E0E0E0"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Texte de la carte -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOM EXERCICE"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="durée · niveau de diffuculté · equipement · repetition"
+                android:textSize="14sp"
+                android:textColor="#555555" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Ligne de séparation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
 
 
 
