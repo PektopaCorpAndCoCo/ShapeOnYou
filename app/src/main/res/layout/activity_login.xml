@@ -6,75 +6,60 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient">
 
-    <!-- 1. Connexion -->
-
-    <!-- 2. Label Email -->
-
-    <!-- 3. Champ Email -->
-
-    <!-- 4. Label Mot de passe -->
-
-    <!-- 5. Champ Mot de passe -->
-
-    <!-- 6. Invitation à l’inscription -->
-
+    <!-- 1. Bouton Connexion -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="192dp"
         android:background="@drawable/button_background"
         android:text="connexion"
         android:textAllCaps="false"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 2. Label Email -->
     <TextView
         android:id="@+id/tvEmailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="Email"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="100dp"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 3. Champ Email -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittext_background"
         android:hint="Entrez votre e-mail"
         android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_background"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 4. Label Mot de passe -->
     <TextView
         android:id="@+id/tvPasswordLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:text="Mot de passe"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="100dp"
-        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 5. Champ Mot de passe -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="280dp"
@@ -85,36 +70,50 @@
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 7. “Rejoins-nous” -->
+    <!-- 6. Mot de passe oublié -->
+
+    <!-- 7. Invitation à l’inscription -->
+
+    <!-- 8. “Rejoins-nous” -->
+    <Button
+        android:id="@+id/btnForgot"
+        android:layout_width="162dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="68dp"
+        android:background="@null"
+        android:text="Mot de passe oublié ?"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
 
     <TextView
         android:id="@+id/tvSignupPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="480dp"
+        android:layout_marginBottom="304dp"
         android:text="Pas encore inscrit·e?"
         android:textSize="16sp"
-        app:layout_constraintBottom_margin="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSignUp"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
         android:text="Rejoins-nous"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@id/tvSignupPrompt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_margin="32dp"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,125 +4,182 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@drawable/bg_gradient">
 
-    <!-- Guideline à 85% de la hauteur (pour caler le bas du bouton) -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_h85"
+    <!-- Titre "Créer un compte" -->
+    <TextView
+        android:id="@+id/tvSignupTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <!-- Triangle bleu, 60% de la largeur, ratio 1:1, collé tout en haut -->
-    <ImageView
-        android:id="@+id/ivTriangle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/bg_triangle"
-        android:scaleType="centerCrop"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintDimensionRatio="1:1"
+        android:text="Créer un compte"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Conteneur du formulaire, directement sous le triangle -->
-    <LinearLayout
-        android:id="@+id/form_container"
-        android:layout_width="0dp"
+    <!-- Label Username -->
+    <TextView
+        android:id="@+id/tvUsernameLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/form_border"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/ivTriangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="0dp">
-
-        <!-- Titre du formulaire -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:gravity="center" />
-
-        <!-- Username + trait -->
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="➔ Username"
-            android:background="@null"
-            android:paddingBottom="4dp"
-            android:layout_marginTop="16dp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000" />
-
-        <!-- Email + trait -->
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="➔ Email"
-            android:inputType="textEmailAddress"
-            android:background="@null"
-            android:paddingBottom="4dp"
-            android:layout_marginTop="16dp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000" />
-
-        <!-- Password + trait -->
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="➔ Password"
-            android:inputType="textPassword"
-            android:background="@null"
-            android:paddingBottom="4dp"
-            android:layout_marginTop="16dp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000" />
-
-        <!-- Confirm password + trait -->
-        <EditText
-            android:id="@+id/etConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="➔ Confirm password"
-            android:inputType="textPassword"
-            android:background="@null"
-            android:paddingBottom="4dp"
-            android:layout_marginTop="16dp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000" />
-    </LinearLayout>
-
-    <!-- Bouton Sign Up, calé entre le bas du formulaire et la guideline_h85 -->
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:text="Sign Up"
+        android:text="Nom d'utilisateur"
         android:textSize="18sp"
         android:textColor="@android:color/white"
-        android:background="@drawable/btn_blue"
-        app:layout_constraintTop_toBottomOf="@id/form_container"
-        app:layout_constraintBottom_toTopOf="@id/guideline_h85"
-        app:layout_constraintStart_toStartOf="@id/form_container"
-        app:layout_constraintEnd_toEndOf="@id/form_container" />
+        app:layout_constraintTop_toBottomOf="@id/tvSignupTitle"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Champ Username -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Entrez votre nom d'utilisateur"
+        android:inputType="textPersonName"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvUsernameLabel"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Label Email -->
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Champ Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Entrez votre e-mail"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Label Mot de passe -->
+    <TextView
+        android:id="@+id/tvPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Champ Mot de passe -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Entrez votre mot de passe"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Label Confirmation Mot de passe -->
+    <TextView
+        android:id="@+id/tvConfirmPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmer mot de passe"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Champ Confirmation Mot de passe -->
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:hint="Confirmez votre mot de passe"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvConfirmPasswordLabel"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bouton Créer un compte -->
+
+    <!-- Texte "Déjà inscrit·e?" -->
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:text="Créer un compte"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etConfirmPassword" />
+
+    <TextView
+        android:id="@+id/tvLoginPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Déjà inscrit·e?"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateAccount"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnLoginLink" />
+
+    <!-- Lien "Connexion" -->
+    <Button
+        android:id="@+id/btnLoginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLoginPrompt"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
