@@ -1,20 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shapeonyou">
 
+    <!-- Si vous n’utilisez QUE le JSON local, INTERNET n’est pas indispensable, mais on peut le garder -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShapeOnYou">
 
+        <!-- 1) Écran de sélection (premier écran) -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".SelectGoalActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- … autres activités … -->
+
+        <!-- 2) L’écran qui affiche la liste de conseils (on y arrive après le choix) -->
+        <activity
+            android:name=".NutritionAdviceActivity"
+            android:exported="false" />
+
+        <!--
+            Les autres activités (LoginActivity, SignupActivity, MainActivity)
+            ont déjà été supprimées si elles existaient encore.
+        -->
     </application>
 </manifest>
-

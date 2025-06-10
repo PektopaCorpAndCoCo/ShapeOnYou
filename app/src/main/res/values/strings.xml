@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ShapeOnYou</string>
+    <string name="desc_icon_nutrition">Icône nutrition</string>
+
 </resources>

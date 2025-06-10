@@ -1,0 +1,86 @@
+{
+  "prise_de_masse": [
+    {
+      "title": "Augmentez légèrement votre apport calorique",
+      "description": "Pour prendre de la masse, misez sur un léger surplus calorique (≈ +300 à +500 kcal/jour) par rapport à vos besoins de maintien. Cela favorise la croissance musculaire sans prise de gras excessive."
+    },
+    {
+      "title": "Mangez 5 à 6 petits repas par jour",
+      "description": "Répartissez vos apports en protéines, glucides et lipides en plusieurs repas (petit-déjeuner, collation, déjeuner, collation, dîner, collation si besoin). Cela maintient un flux d’acides aminés en continu et évite les fringales."
+    },
+    {
+      "title": "Privilégiez les protéines complètes",
+      "description": "Optez pour sources les plus riches en acides aminés essentiels : viandes maigres (poulet, dinde), poissons gras (saumon, maquereau), œufs entiers, produits laitiers (fromage blanc, yaourt grec)."
+    },
+    {
+      "title": "Pesez vos portions de viande et poisson",
+      "description": "Visez 2 à 2,5 g de protéines par kilo de poids de corps. Par exemple, si vous pesez 70 kg, consommez environ 140 g de protéines totales réparties sur la journée (≈ 30 g par repas)."
+    },
+    {
+      "title": "Augmentez votre consommation de féculents",
+      "description": "Riz complet, pâtes complètes, quinoa, patate douce… Ces glucides complexes apportent de l’énergie prolongée pour vos séances et facilitent la prise de masse."
+    },
+    {
+      "title": "Ajoutez des lipides de qualité",
+      "description": "Ne négligez pas les bonnes graisses (huile d’olive, avocat, oléagineux, poissons gras). Elles sont indispensables à la production hormonale et à la récupération musculaire."
+    },
+    {
+      "title": "Hydratez-vous bien",
+      "description": "Buvez au minimum 2 L d’eau par jour, voire jusqu’à 3 L si vous vous entraînez intensément. L’eau transporte les nutriments et favorise la synthèse protéique."
+    },
+    {
+      "title": "Consommez un shake de protéines après l’entraînement",
+      "description": "Prenez 20–30 g de whey (ou caséine) dans l’heure qui suit votre séance. Cela déclenche la récupération et la construction musculaire."
+    },
+    {
+      "title": "Intégrez des collations hypercaloriques",
+      "description": "Noix, amandes, beurres de cacahuète, smoothies à base de fruits secs et beurre de noix… pour atteindre votre surplus calorique sans vous sentir trop lourd."
+    },
+    {
+      "title": "Variez les sources de protéines végétales",
+      "description": "Si vous êtes végétarien ou flexitarien, combinez légumineuses (lentilles, pois chiches) + céréales complètes (riz complet, boulgour). L’association fournit un profil aminé complet."
+    }
+  ],
+  "seche": [
+    {
+      "title": "Créez un léger déficit calorique",
+      "description": "Réduisez votre apport de 300 à 500 kcal par jour par rapport à vos besoins de maintien pour favoriser la perte de masse grasse sans sacrifier le muscle."
+    },
+    {
+      "title": "Priorisez les protéines à chaque repas",
+      "description": "Visez 2 g de protéines par kilo de poids de corps. Cela aide à préserver votre masse musculaire même en déficit calorique."
+    },
+    {
+      "title": "Réduisez progressivement les glucides simples",
+      "description": "Évitez sodas, jus de fruits industriels et sucreries. Remplacez-les par des fruits à IG bas (baies, pomme avec la peau) et privilégiez les glucides complexes (avoine, patate douce)."
+    },
+    {
+      "title": "Augmentez la part de légumes",
+      "description": "Légumes verts, légumes-feuilles, crucifères (brocoli, chou-fleur) : très faibles en calories, riches en fibres et micronutriments, ils vous aident à tenir la faim."
+    },
+    {
+      "title": "Mangez des graisses végétales en quantité modérée",
+      "description": "Huile d’olive, avocat et oléagineux : elles vous apportent des acides gras essentiels et favorisent la satiété sans excès calorique."
+    },
+    {
+      "title": "Faites des petits-déjeuners à IG bas",
+      "description": "Porridge à l’avoine complète, œufs brouillés avec épinards, fromage blanc 0 % + baies : limite le pic d’insuline et stabilise l’énergie."
+    },
+    {
+      "title": "Fractionnez si nécessaire",
+      "description": "Si vous avez du mal à tenir un gros repas à déficit, optez pour 5 petits repas pour éviter les baisses d’énergie et mieux contrôler la faim."
+    },
+    {
+      "title": "Planifiez au moins 1 « réfeed » hebdomadaire",
+      "description": "Dans la semaine, réhaussez légèrement vos glucides (pain complet, riz complet) lors d’un repas. Cela rééquilibre vos hormones (leptine, ghréline) et relance le métabolisme."
+    },
+    {
+      "title": "Conservez un apport en fibres élevé",
+      "description": "Fruits, légumes, légumineuses et céréales complètes assurent une digestion lente, limitent les fringales et optimisent la santé intestinale."
+    },
+    {
+      "title": "Évitez l’alcool ou limitez-le fortement",
+      "description": "L’alcool est très calorique et bloque temporairement la lipolyse. Si vous en consommez, plafonnez-le à 1 verre de vin rouge sec par semaine maximum."
+    }
+  ]
+}
