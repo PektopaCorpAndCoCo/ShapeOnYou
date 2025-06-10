@@ -50,6 +50,7 @@ public class SignupActivity extends AppCompatActivity {
             authHelper.signUp(email, pass, (OnCompleteListener<AuthResult>) task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(this, "Inscription réussie ! Connectez-vous.", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, Quest1Activity.class));
                     finish();
                 } else {
                     Toast.makeText(this,

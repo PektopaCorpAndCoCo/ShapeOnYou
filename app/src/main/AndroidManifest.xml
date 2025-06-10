@@ -26,6 +26,9 @@
             android:name=".MainActivity"
             android:exported="true" />
 
+        <activity android:name=".Quest1Activity" />
+        <activity android:name=".Quest2Activity" />
+
         <!-- Ajoutez ici d’autres activités si besoin :
         <activity android:name=".UneAutreActivity" />
          -->
