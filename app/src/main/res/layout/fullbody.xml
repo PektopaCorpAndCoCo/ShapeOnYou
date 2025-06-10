@@ -9,6 +9,37 @@
     <!-- Header -->
     <include layout="@layout/header" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_retour"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Retour"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_demarrer"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Démarrer"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
 
 
     <!-- Espace vide pour pousser le footer en bas -->
