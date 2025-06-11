@@ -4,31 +4,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="@color/card_background"
     android:padding="16dp">
 
-    <!-- Titre dynamique -->
+    <!-- Titre centré en haut -->
     <TextView
         android:id="@+id/tvAdviceTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Conseils Nutritifs"
-        android:textColor="@color/card_background"
-        android:textSize="26sp"
+        android:text="Conseils nutritifs"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- RecyclerView -->
+    <!-- RecyclerView pour la liste -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAdviceList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:clipToPadding="false"
-        android:paddingTop="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/tvAdviceTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

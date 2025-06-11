@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Couleurs du thème Android (évite l’erreur “colorPrimary not found”) -->
-    <color name="colorPrimary">#00C9FF</color>
-    <color name="colorPrimaryDark">#0094CC</color>
+    <!-- Couleurs Theme Android -->
+    <color name="colorPrimary">#80D8FF</color>
+    <color name="colorPrimaryDark">#4A148C</color>
     <color name="colorAccent">#92FE9D</color>
 
-    <!-- Palette Figma pour le nouveau design -->
-    <color name="gradient_start">#00C9FF</color>
-    <color name="gradient_end">#92FE9D</color>
-    <color name="card_background">#FFFFFF</color>
-    <color name="text_primary">#333333</color>
-    <color name="text_secondary">#666666</color>
-
-    <!-- Boutons et accents -->
+    <!-- Palette “pill-shape” -->
+    <color name="option_background">#80D8FF</color>
     <color name="button_primary">#00695C</color>
     <color name="button_secondary">#4A148C</color>
+    <color name="card_background">#FFFFFF</color>
 
-    <!-- Gris clair de fond et gris foncé pour textes secondaires -->
+    <!-- Textes -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+
+    <!-- Autres nuances -->
     <color name="gray_light">#F5F5F5</color>
     <color name="gray_dark">#757575</color>
-
-    <!-- Teal utilisé dans certains drawables -->
     <color name="teal_700">#018786</color>
 
-    <!-- Ombre légère -->
-    <color name="shadow_color">#22000000</color>
+    <!-- Gradient (si besoin) -->
+    <color name="gradient_start">#00C9FF</color>
+    <color name="gradient_end">#92FE9D</color>
 </resources>
