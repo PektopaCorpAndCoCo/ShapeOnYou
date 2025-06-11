@@ -3,10 +3,10 @@ package com.example.shapeonyou;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class SelectGoalActivity extends AppCompatActivity {
 
@@ -19,16 +19,16 @@ public class SelectGoalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_goal);
 
-        Button btnMasse = findViewById(R.id.btnPriseDeMasse);
-        Button btnSeche = findViewById(R.id.btnSeche);
+        CardView cardMass = findViewById(R.id.card_mass);
+        CardView cardCut  = findViewById(R.id.card_cut);
 
-        btnMasse.setOnClickListener(v -> {
+        cardMass.setOnClickListener(v -> {
             Intent intent = new Intent(SelectGoalActivity.this, NutritionAdviceActivity.class);
             intent.putExtra(EXTRA_GOAL, GOAL_MASSE);
             startActivity(intent);
         });
 
-        btnSeche.setOnClickListener(v -> {
+        cardCut.setOnClickListener(v -> {
             Intent intent = new Intent(SelectGoalActivity.this, NutritionAdviceActivity.class);
             intent.putExtra(EXTRA_GOAL, GOAL_SECHE);
             startActivity(intent);

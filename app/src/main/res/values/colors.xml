@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Couleurs du thème (à adapter si vous avez d'autres codes hex à utiliser) -->
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <!-- Couleurs du thème Android (évite l’erreur “colorPrimary not found”) -->
+    <color name="colorPrimary">#00C9FF</color>
+    <color name="colorPrimaryDark">#0094CC</color>
+    <color name="colorAccent">#92FE9D</color>
 
-    <!-- Garde aussi les couleurs déjà utilisées pour le nouvel écran -->
-    <color name="purple_700">#3700B3</color>
-    <color name="teal_700">#018786</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
+    <!-- Palette Figma pour le nouveau design -->
+    <color name="gradient_start">#00C9FF</color>
+    <color name="gradient_end">#92FE9D</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
+
+    <!-- Boutons et accents -->
+    <color name="button_primary">#00695C</color>
+    <color name="button_secondary">#4A148C</color>
+
+    <!-- Gris clair de fond et gris foncé pour textes secondaires -->
     <color name="gray_light">#F5F5F5</color>
     <color name="gray_dark">#757575</color>
+
+    <!-- Teal utilisé dans certains drawables -->
+    <color name="teal_700">#018786</color>
+
+    <!-- Ombre légère -->
+    <color name="shadow_color">#22000000</color>
 </resources>
