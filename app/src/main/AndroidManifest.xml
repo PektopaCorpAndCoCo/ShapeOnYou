@@ -8,7 +8,7 @@
 
         <!-- Activité de lancement (Login) -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,7 +27,10 @@
             android:exported="true" />
 
         <activity android:name=".Quest1Activity" />
-        <activity android:name=".Quest2Activity" />
+        <activity android:name=".Quest2Activity"
+            android:exported="true"/>
+        <activity android:name=".Quest3Activity" />
+        <activity android:name=".LoginActivity" />
 
         <!-- Ajoutez ici d’autres activités si besoin :
         <activity android:name=".UneAutreActivity" />
