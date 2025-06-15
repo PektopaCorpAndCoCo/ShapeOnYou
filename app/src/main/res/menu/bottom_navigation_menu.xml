@@ -1,14 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nutrition"
-        android:icon="@drawable/ic_nutrition"
-        android:title="Nutrition" />
+        android:id="@+id/profil"
+        android:icon="@drawable/ic_user"
+        android:title="Profil" />
     <item
         android:id="@+id/favoris"
         android:icon="@drawable/ic_favorite"
         android:title="favoris" />
+
     <item
-        android:id="@+id/progress"
-        android:icon="@drawable/ic_progress"
-        android:title="Suivi" />
+        android:id="@+id/nutrition"
+        android:icon="@drawable/ic_nutrition"
+        android:title="Nutrition" />
 </menu>

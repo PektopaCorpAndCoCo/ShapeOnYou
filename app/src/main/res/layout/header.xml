@@ -5,14 +5,7 @@
     android:orientation="horizontal"
     android:gravity="center_vertical"
     android:padding="12dp"
-    android:background="@color/footer">
-
-    <ImageView
-        android:id="@+id/ic_user"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_user"
-        android:contentDescription="Profil" />
+    android:background="@android:color/holo_blue_dark">
 
     <TextView
         android:id="@+id/header_title"
@@ -20,15 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Shape On You"
-        android:textColor="@android:color/white"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/ic_bell"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_bell"
-        android:contentDescription="Notifications" />
 </LinearLayout>
