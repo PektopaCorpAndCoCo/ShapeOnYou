@@ -3,6 +3,7 @@ package com.example.shapeonyou;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -40,14 +41,16 @@ public class Quest2Activity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db    = FirebaseFirestore.getInstance();
 
-        // 3) setup option listeners
+        // 3) setup option listeners with animation
         View.OnClickListener optionClick = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // reset tous les boutons à l’état normal
-                resetOptionStyles();
-                // cocher celui qu’on a cliqué
+                // animate sélection
+                animateSelection(v);
+                // visuel sélection (pour un sélecteur d'état si besoin)
+                resetOptionStates();
                 v.setSelected(true);
+                // mémoriser la valeur choisie
                 selectedLevel = ((Button)v).getText().toString();
             }
         };
@@ -64,11 +67,38 @@ public class Quest2Activity extends AppCompatActivity {
         });
     }
 
-    private void resetOptionStyles() {
-        // on désélectionne visuellement tous les boutons
+    private void resetOptionStates() {
         btnOptionBeginner.setSelected(false);
         btnOptionIntermediate.setSelected(false);
         btnOptionAdvanced.setSelected(false);
+    }
+
+    /**
+     * Anime le bouton sélectionné (scale up) et remet les autres à l'échelle normale.
+     */
+    private void animateSelection(View selected) {
+        Button[] buttons = {
+                btnOptionBeginner,
+                btnOptionIntermediate,
+                btnOptionAdvanced
+        };
+        for (Button btn : buttons) {
+            if (btn == selected) {
+                btn.animate()
+                        .scaleX(1.1f)
+                        .scaleY(1.1f)
+                        .setDuration(150)
+                        .setInterpolator(new DecelerateInterpolator())
+                        .start();
+            } else {
+                btn.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(150)
+                        .setInterpolator(new DecelerateInterpolator())
+                        .start();
+            }
+        }
     }
 
     private void saveLevel() {
@@ -98,8 +128,7 @@ public class Quest2Activity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(Quest2Activity.this, "Niveau enregistré", Toast.LENGTH_SHORT).show();
-                        // passe à l'activité suivante
-                        Intent i = new Intent(Quest2Activity.this, MainActivity.class);
+                        Intent i = new Intent(Quest2Activity.this, Quest3Activity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i);
                         finish();
