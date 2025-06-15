@@ -6,7 +6,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +26,10 @@ import java.util.Map;
 
 public class Quest1Activity extends AppCompatActivity {
 
-    private EditText etSexe, etAge, etTaille, etPoids;
+    private EditText  etAge, etTaille, etPoids;
     private Button btnSignUp;
+    private RadioGroup rgSexe;
+    private RadioButton rbHomme, rbFemme;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -34,7 +40,9 @@ public class Quest1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_quest1);
 
         // Liaison des vues
-        etSexe    = findViewById(R.id.etSexe);
+        rgSexe = findViewById(R.id.rgSexe);
+        rbHomme = findViewById(R.id.rbHomme);
+        rbFemme = findViewById(R.id.rbFemme);
         etAge     = findViewById(R.id.etAge);
         etTaille  = findViewById(R.id.etTaille);
         etPoids   = findViewById(R.id.etPoids);
@@ -54,23 +62,29 @@ public class Quest1Activity extends AppCompatActivity {
     private void saveProfile() {
         btnSignUp.setEnabled(false);
 
-        String sexe     = etSexe.getText().toString().trim();
+        int selectedSexeId = rgSexe.getCheckedRadioButtonId();
         String ageStr   = etAge.getText().toString().trim();
         String tailleStr = etTaille.getText().toString().trim();
         String poidsStr = etPoids.getText().toString().trim();
 
-        if (TextUtils.isEmpty(sexe) ||
-                TextUtils.isEmpty(ageStr) ||
-                TextUtils.isEmpty(tailleStr) ||
-                TextUtils.isEmpty(poidsStr)) {
-            Toast.makeText(this, "Merci de remplir tous les champs", Toast.LENGTH_SHORT).show();
+        if (selectedSexeId == -1) {
+            Toast.makeText(this, "Merci de sélectionner le sexe", Toast.LENGTH_SHORT).show();
             btnSignUp.setEnabled(true);
             return;
         }
+        String sexe = ((RadioButton) findViewById(selectedSexeId)).getText().toString();
 
-        int age = Integer.parseInt(ageStr);
-        double taille = Double.parseDouble(tailleStr.replace(',', '.'));
-        double poids  = Double.parseDouble(poidsStr.replace(',', '.'));
+        int age;
+        double taille, poids;
+        try {
+            age = Integer.parseInt(ageStr);
+            taille = Double.parseDouble(tailleStr.replace(',', '.'));
+            poids  = Double.parseDouble(poidsStr.replace(',', '.'));
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Merci de saisir des valeurs valides", Toast.LENGTH_SHORT).show();
+            btnSignUp.setEnabled(true);
+            return;
+        }
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser == null) {
