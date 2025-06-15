@@ -13,43 +13,10 @@ public class UpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.abdos);
-        ImageView userIcon = findViewById(R.id.ic_user);
-        userIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(UpActivity.this, ProfilActivity.class);
-            startActivity(intent);
-        });
-
-        ImageView bellIcon = findViewById(R.id.ic_bell);
-        bellIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(UpActivity.this, NotificationActivity.class);
-            startActivity(intent);
-        });
-
         findViewById(R.id.btn_retour).setOnClickListener(v -> {
             Intent intent = new Intent(UpActivity.this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // facultatif : pour éviter de revenir à FullActivity avec le bouton back
             startActivity(intent);
-        });
-
-
-
-
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnItemSelectedListener(item -> {
-            int id = item.getItemId();
-
-            if (id == R.id.nutrition) {
-                startActivity(new Intent(UpActivity.this, NutritionActivity.class));
-                return true;
-            } else if (id == R.id.favoris) {
-                startActivity(new Intent(UpActivity.this, FavorisActivity.class));
-                return true;
-            } else if (id == R.id.progress) {
-                startActivity(new Intent(UpActivity.this, SuiviActivity.class));
-                return true;
-            }
-
-            return false;
         });
     }
 

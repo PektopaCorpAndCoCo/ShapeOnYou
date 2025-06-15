@@ -27,18 +27,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        ImageView userIcon = findViewById(R.id.ic_user);
-        userIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
-            startActivity(intent);
-        });
-
-        ImageView bellIcon = findViewById(R.id.ic_bell);
-        bellIcon.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
-            startActivity(intent);
-        });
-
         ImageView fullImage = findViewById(R.id.hall);
         fullImage.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FullActivity.class);
@@ -61,24 +49,6 @@ public class MainActivity extends AppCompatActivity {
         abdosImage.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AbdosActivity.class);
             startActivity(intent);
-        });
-
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnItemSelectedListener(item -> {
-            int id = item.getItemId();
-
-            if (id == R.id.nutrition) {
-                startActivity(new Intent(MainActivity.this, NutritionActivity.class));
-                return true;
-            } else if (id == R.id.favoris) {
-                startActivity(new Intent(MainActivity.this, FavorisActivity.class));
-                return true;
-            } else if (id == R.id.progress) {
-                startActivity(new Intent(MainActivity.this, SuiviActivity.class));
-                return true;
-            }
-
-            return false;
         });
 
 
