@@ -12,13 +12,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class ExercicePageActivity extends AppCompatActivity {
 
     //private String exerciceType = "abdo";
-    private String[] serieOfExercises = {"crunch-abdo", "crunch-bicycle", "planks", "russian-twist", "touche-talon"};
-    private ExercicePage[] serieOfExercisesPages;
-    private int currentExerciseId = 0; //need to be stored externally to avoid page refresh bug
+    //private String[] serieOfExercises = {"crunch-abdo", "crunch-bicycle", "planks", "russian-twist", "touche-talon"};
+    //private final ArrayList<String> serieOfExercises = SerieOfExercisesSingleton.getInstance().getSerieOfExercises();
+    //private ExercicePage[] serieOfExercisesPages;
+    //private int currentExerciseId = 0; //need to be stored externally to avoid page refresh bug
     private VideoView videoView;
     private TextView titleTextView;
     private TextView repetitionsTextView;
@@ -54,13 +56,20 @@ public class ExercicePageActivity extends AppCompatActivity {
         //Log.d("DEBUG", "Exercise: " + exercise.name + ", Reps: " + exercise.repetitionNumber);
 
         // generate all exercises pages
+        /*
         try {
             serieOfExercisesPages = generateExercicePage(serieOfExercises);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        */
+        try {
+            SerieOfExercisesSingleton.getInstance().generateExercicePage(SerieOfExercisesSingleton.getInstance().getSerieOfExercises(), this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-        populateUI(serieOfExercisesPages[currentExerciseId]);
+        populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
 
         // Button listeners
         nextButton.setOnClickListener(v -> exerciseCompleted());
@@ -69,7 +78,7 @@ public class ExercicePageActivity extends AppCompatActivity {
 
 
     }
-
+    /*
     private ExercicePage[] generateExercicePage(String[] serieOfExercises) throws IOException {
         ExercicePage[] result = new ExercicePage[serieOfExercises.length];
         for(int i =0; i< serieOfExercises.length; i++){
@@ -110,7 +119,7 @@ public class ExercicePageActivity extends AppCompatActivity {
             tokens = new String[]{"Name Error", "Instruction Error"};
         }
         return tokens;
-    }
+    }*/
 
     private void populateUI(ExercicePage exercise) {
         //Log.d("DEBUG", "Populating UI with: " + exercise.name);
@@ -128,21 +137,22 @@ public class ExercicePageActivity extends AppCompatActivity {
         //send data for personalized training
         nextExercise();
     }
+
     private void nextExercise(){
-        if(currentExerciseId == serieOfExercises.length-1){
-            //end series
+        if(SerieOfExercisesSingleton.getInstance().nextExercise()){
+            populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
         }else{
-            currentExerciseId++;
-            populateUI(serieOfExercisesPages[currentExerciseId]);
+            //end series
+            //go to dashboard/win panel
+            SerieOfExercisesSingleton.getInstance().reset();
         }
     }
 
     private void previousExercise(){
-        if(currentExerciseId<=0){
-            //return to serie list page
+        if(SerieOfExercisesSingleton.getInstance().previousExercise()){
+            populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
         }else{
-            currentExerciseId--;
-            populateUI(serieOfExercisesPages[currentExerciseId]);
+            //return to serie list page
         }
     }
 }
