@@ -73,6 +73,11 @@ public class BodyPartActivity extends AppCompatActivity {
             startActivity(intent);
         });*/
 
+        try {
+            SerieOfExercisesSingleton.getInstance().generateExercicePage(SerieOfExercisesSingleton.getInstance().getSerieOfExercises(), this);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         populateUI(SerieOfExercisesSingleton.getInstance().getSerieOfExercisesPages());
 
@@ -109,13 +114,15 @@ public class BodyPartActivity extends AppCompatActivity {
     }
 
     private void back(){
-        //retour à la page précédente
+        //retour à la page précédente (dashboard)
+        SerieOfExercisesSingleton.getInstance().reset();
+        Intent intent = new Intent(BodyPartActivity.this, DashboardActivity.class);
+        startActivity(intent);
     }
 
     private void start(){
         //démarrer série
+        Intent intent = new Intent(BodyPartActivity.this, ExercicePageActivity.class);
+        startActivity(intent);
     }
-
-
-
-    }
+}

@@ -13,18 +13,11 @@
         android:theme="@style/Theme.ShapeOnYou"
         tools:targetApi="31">
 
-        <activity android:name=".ProfilActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".FullActivity" />
-        <activity android:name=".UpActivity" />
-        <activity android:name=".AbdosActivity" />
-        <activity android:name=".DownActivity" />
-        <activity android:name=".NutritionActivity" />
-        <activity android:name=".FavorisActivity" />
-        <activity android:name=".SuiviActivity" />
+        <activity android:name=".BodyPartActivity" />
+        <activity android:name=".ExercicePageActivity" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".DashboardActivity"
             android:exported="true">
 
             <intent-filter>
