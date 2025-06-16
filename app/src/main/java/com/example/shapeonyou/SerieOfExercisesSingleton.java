@@ -134,7 +134,7 @@ public class SerieOfExercisesSingleton {
     }
 
     public boolean previousExercise(){
-        if(currentExerciseId >= serieOfExercises.size()-1) {
+        if(currentExerciseId <= 0) {
             return false;
         }else {
             this.currentExerciseId -= 1;
