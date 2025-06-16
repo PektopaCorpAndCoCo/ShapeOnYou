@@ -4,12 +4,26 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+<<<<<<< feature/merge_API_dashboard
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShapeOnYou"
+        tools:targetApi="31">
+
+        <activity android:name=".BodyPartActivity" />
+        <activity android:name=".ExercicePageActivity" />
+
+        <activity
+            android:name=".DashboardActivity"
+=======
         android:theme="@style/AppTheme">
 
         <!-- Activité de lancement (Login) -->
         <activity
             android:name=".WelcomeActivity"
+>>>>>>> feature/merge_compilation_login_-API_dashboard
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
