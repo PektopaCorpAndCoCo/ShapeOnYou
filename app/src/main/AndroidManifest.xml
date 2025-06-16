@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.shapeonyou">
 
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+<<<<<<< feature/merge_API_dashboard
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShapeOnYou"
@@ -18,14 +15,40 @@
 
         <activity
             android:name=".DashboardActivity"
+=======
+        android:theme="@style/AppTheme">
+
+        <!-- Activité de lancement (Login) -->
+        <activity
+            android:name=".WelcomeActivity"
+>>>>>>> feature/merge_compilation_login_-API_dashboard
             android:exported="true">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Déclaration de SignupActivity -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+
+        <!-- Déclaration de MainActivity (si vous l’utilisez ailleurs) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity android:name=".Quest1Activity" />
+        <activity android:name=".Quest2Activity"
+            android:exported="true"/>
+        <activity android:name=".Quest3Activity" />
+        <activity android:name=".LoginActivity" />
+
+        <!-- Ajoutez ici d’autres activités si besoin :
+        <activity android:name=".UneAutreActivity" />
+         -->
+
+    </application>
 </manifest>

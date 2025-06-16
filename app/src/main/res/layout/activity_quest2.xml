@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quest2Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/bg_gradient" >
+
+    <!-- Titre de la question -->
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quel est votre niveau de forme physique ?"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Option Débutant -->
+    <Button
+        android:id="@+id/btnOptionBeginner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Débutant"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_background"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Option Intermédiaire -->
+    <Button
+        android:id="@+id/btnOptionIntermediate"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Intermédiaire"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_background"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/btnOptionBeginner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Option Avancé -->
+    <Button
+        android:id="@+id/btnOptionAdvanced"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="Avancé"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_background"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/btnOptionIntermediate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bouton Continuer -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="64dp"
+        android:text="continuer"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="#FFF"
+        android:background="@drawable/pill_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

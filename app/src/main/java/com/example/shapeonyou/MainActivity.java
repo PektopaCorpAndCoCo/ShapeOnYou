@@ -11,49 +11,29 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 1. Init Firebase
+        FirebaseApp.initializeApp(this);
+
+        // 2. Edge-to-edge (status & nav bars)
         EdgeToEdge.enable(this);
-        setContentView(R.layout.dashboard);
-        //setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.dashboard), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        ImageView fullImage = findViewById(R.id.hall);
-        fullImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, FullActivity.class);
-            startActivity(intent);
-        });
+        // 3. Charge le vrai layout principal
+        setContentView(R.layout.activity_main);
 
-        ImageView basImage = findViewById(R.id.down);
-        basImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, DownActivity.class);
-            startActivity(intent);
-        });
-
-        ImageView UpImage = findViewById(R.id.up);
-        UpImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, UpActivity.class);
-            startActivity(intent);
-        });
-
-        ImageView abdosImage = findViewById(R.id.abdos);
-        abdosImage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AbdosActivity.class);
-            startActivity(intent);
-        });
-
-
-
+        // 4. Applique les insets système (status/nav bars) à la racine
+        ViewCompat.setOnApplyWindowInsetsListener(
+                findViewById(android.R.id.content),
+                (view, insets) -> {
+                    Insets sys = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                    view.setPadding(sys.left, sys.top, sys.right, sys.bottom);
+                    return insets;
+                }
+        );
     }
-
-
 }
