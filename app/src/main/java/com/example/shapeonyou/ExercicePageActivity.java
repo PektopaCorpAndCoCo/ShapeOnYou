@@ -1,5 +1,6 @@
 package com.example.shapeonyou;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,12 +63,12 @@ public class ExercicePageActivity extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        */
+        *//*
         try {
             SerieOfExercisesSingleton.getInstance().generateExercicePage(SerieOfExercisesSingleton.getInstance().getSerieOfExercises(), this);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
         populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
 
@@ -145,6 +146,8 @@ public class ExercicePageActivity extends AppCompatActivity {
             //end series
             //go to dashboard/win panel
             SerieOfExercisesSingleton.getInstance().reset();
+            Intent intent = new Intent(ExercicePageActivity.this, DashboardActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -153,6 +156,8 @@ public class ExercicePageActivity extends AppCompatActivity {
             populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
         }else{
             //return to serie list page
+            Intent intent = new Intent(ExercicePageActivity.this, BodyPartActivity.class);
+            startActivity(intent);
         }
     }
 }
