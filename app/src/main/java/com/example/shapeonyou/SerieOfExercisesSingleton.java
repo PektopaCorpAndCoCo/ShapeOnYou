@@ -19,8 +19,8 @@ public class SerieOfExercisesSingleton {
 
 
     private SerieOfExercisesSingleton(){
-        this.type = ExercisesType.abdo;
-        this.serieOfExercises = new ArrayList<String>(Arrays.asList("crunch-abdo", "crunch-bicycle", "planks", "russian-twist", "touche-talon"));
+        //this.type = ExercisesType.abdo;
+        //this.serieOfExercises = new ArrayList<String>(Arrays.asList("crunch-abdo", "crunch-bicycle", "planks", "russian-twist", "touche-talon"));
 
     }
 
@@ -39,6 +39,10 @@ public class SerieOfExercisesSingleton {
         return serieOfExercises;
     }
 
+    public ArrayList<ExercicePage> getSerieOfExercisesPages(){
+        return serieOfExercisesPages;
+    }
+
     public int getCurrentExerciseId(){
         return currentExerciseId;
     }
@@ -52,11 +56,11 @@ public class SerieOfExercisesSingleton {
     }
 
     //not used for now
-    /*
+
     public void setSerieOfExercises(ArrayList<String> newSerieOfExercises){
         this.serieOfExercises = newSerieOfExercises;
     }
-
+/*
     public void addExerciseToSerieOfExercises(String newExercise){
         this.serieOfExercises.add(newExercise);
     }
