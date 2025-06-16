@@ -43,32 +43,7 @@ public class ExercicePageActivity extends AppCompatActivity {
         skipButton = findViewById(R.id.skipButton);
         nextButton = findViewById(R.id.nextButton);
 
-        //Log.d("DEBUG", "Activity started");
 
-        /*
-        // Example usage with dummy data
-        ExercicePage exercise = new ExercicePage();
-        exercise.name = "Push Ups";
-        exercise.videoUrl = "android.resource://" + getPackageName() + "/" + R.raw.test;
-        exercise.instructions = "Do 10 push ups slowly and with control.";
-        exercise.repetitionNumber = 10;
-         */
-
-        //Log.d("DEBUG", "Exercise: " + exercise.name + ", Reps: " + exercise.repetitionNumber);
-
-        // generate all exercises pages
-        /*
-        try {
-            serieOfExercisesPages = generateExercicePage(serieOfExercises);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        *//*
-        try {
-            SerieOfExercisesSingleton.getInstance().generateExercicePage(SerieOfExercisesSingleton.getInstance().getSerieOfExercises(), this);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }*/
 
         populateUI(SerieOfExercisesSingleton.getInstance().getCurrentExercicePage());
 
@@ -79,48 +54,6 @@ public class ExercicePageActivity extends AppCompatActivity {
 
 
     }
-    /*
-    private ExercicePage[] generateExercicePage(String[] serieOfExercises) throws IOException {
-        ExercicePage[] result = new ExercicePage[serieOfExercises.length];
-        for(int i =0; i< serieOfExercises.length; i++){
-            ExercicePage exercicePage = new ExercicePage();
-            //exercicePage.name = serieOfExercises[i];
-
-            String name = serieOfExercises[i].replace("-", "_");
-            int videoResId = getResources().getIdentifier(name, "raw", getPackageName());
-            int csvResId = getResources().getIdentifier(name + "_data", "raw", getPackageName());
-
-            String[] exerciseData = readCsvFile(csvResId);
-
-            exercicePage.name = exerciseData[0];
-            exercicePage.videoUrl = "android.resource://" + getPackageName() + "/" + videoResId;
-            exercicePage.instructions = exerciseData[1];
-            exercicePage.repetitionNumber = 10; //temp hardcode (need to be rethink)
-
-            result[i] = exercicePage;
-        }
-        return result;
-    }
-
-    private String[] readCsvFile(int csvFileId){
-        String[] tokens = null;
-        try {
-            InputStream is = getResources().openRawResource(csvFileId);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line;
-
-            if ((line = reader.readLine()) != null) {
-                tokens = line.split(",");
-            }
-
-            reader.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            tokens = new String[]{"Name Error", "Instruction Error"};
-        }
-        return tokens;
-    }*/
 
     private void populateUI(ExercicePage exercise) {
         //Log.d("DEBUG", "Populating UI with: " + exercise.name);
