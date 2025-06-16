@@ -46,7 +46,7 @@ public class DashboardActivity extends AppCompatActivity {
         ImageView UpImage = findViewById(R.id.up);
         UpImage.setOnClickListener(v -> {
             SerieOfExercisesSingleton.getInstance().setType(ExercisesType.up);
-            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("")));
+            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("curl-concentre", "dips-avec-une-chaise", "face-pull", "pompes", "rowing-barre")));
             runSerie();
         });
 
@@ -59,11 +59,6 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void runSerie(){
-        try {
-            SerieOfExercisesSingleton.getInstance().generateExercicePage(SerieOfExercisesSingleton.getInstance().getSerieOfExercises(), this);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         Intent intent = new Intent(DashboardActivity.this, BodyPartActivity.class);
         startActivity(intent);
     }
