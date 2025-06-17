@@ -38,7 +38,7 @@ public class DashboardActivity extends AppCompatActivity {
         ImageView basImage = findViewById(R.id.down);
         basImage.setOnClickListener(v -> {
             SerieOfExercisesSingleton.getInstance().setType(ExercisesType.down);
-            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("")));
+            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("extension-lombaire-45","fente-avant-halteres","hip-thrust","squate","step-up")));
             runSerie();
         });
 
