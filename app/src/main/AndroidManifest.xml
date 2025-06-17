@@ -13,6 +13,8 @@
         <activity android:name=".BodyPartActivity" />
         <activity android:name=".ExercicePageActivity" />
         <activity android:name=".DashboardActivity" />
+        <activity android:name=".NutritionAdviceActivity" />
+        <activity android:name=".SelectGoalActivity" />
 
         <!-- Activité de lancement (Login) -->
         <activity
