@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Fond transparent (outline uniquement) -->
+    <solid android:color="@android:color/transparent" />
+    <!-- Bord arrondi -->
+    <corners android:radius="12dp" />
+    <!-- Bordure de 2dp, couleur à définir au niveau du bouton via app:strokeColor -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/teal_700" />
+    <!-- Optionnel : légère ombre interne (sur les appareils récents) -->
+    <padding
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp" />
+</shape>

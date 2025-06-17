@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
             authHelper.signIn(email, pwd, task -> {
 
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(this, MainActivity.class));
+                    startActivity(new Intent(this, DashboardActivity.class));
                     finish();
 
                 }
