@@ -1,0 +1,166 @@
+{
+  "prise_de_masse": [
+    {
+      "title": "Augmentez légèrement votre apport calorique",
+      "description": "Misez sur un surplus de 300–500 kcal/jour par rapport à vos besoins de maintien pour favoriser la croissance musculaire sans prise de gras excessive."
+    },
+    {
+      "title": "Mangez 5 à 6 petits repas par jour",
+      "description": "Répartissez vos macronutriments en plusieurs repas (petit-déjeuner, collation, déjeuner, collation, dîner, collation) pour maintenir un apport constant en acides aminés."
+    },
+    {
+      "title": "Privilégiez les protéines complètes",
+      "description": "Choisissez des sources riches en acides aminés essentiels : poulet, dinde, bœuf maigre, œufs, poissons gras, whey et fromage blanc."
+    },
+    {
+      "title": "Visez 2 g de protéines/kg de poids corporel",
+      "description": "Si vous pesez 75 kg, consommez environ 150 g de protéines par jour, répartis équitablement sur vos repas."
+    },
+    {
+      "title": "Faites du meal prep",
+      "description": "Préparez vos plats en batch (riz complet, poulet, légumes) pour ne jamais manquer de repas équilibrés et éviter les écarts."
+    },
+    {
+      "title": "Augmentez votre consommation de glucides complexes",
+      "description": "Riz complet, patate douce, quinoa et avoine apportent de l’énergie durable pour vos entraînements intenses."
+    },
+    {
+      "title": "Introduisez des lipides de qualité",
+      "description": "Avocat, huile d’olive, noix et graines fournissent des oméga-3/6 indispensables à la récupération et à l’équilibre hormonal."
+    },
+    {
+      "title": "Hydratez-vous en continu",
+      "description": "2,5 à 3 L d’eau par jour, voire plus si vous transpirez beaucoup, pour optimiser le transport des nutriments."
+    },
+    {
+      "title": "Prenez un shake post-workout",
+      "description": "20–30 g de whey avec de l’eau ou du lait pour déclencher l’anabolisme musculaire dans les 30 min après l’effort."
+    },
+    {
+      "title": "Intégrez des smoothies hypercaloriques",
+      "description": "Mixez banane, beurre de cacahuète, flocons d’avoine et lait végétal pour une collation riche en énergie."
+    },
+    {
+      "title": "N’oubliez pas les légumes",
+      "description": "Au moins 300 g de légumes variés par jour pour les fibres, vitamines et minéraux, même en phase de prise de masse."
+    },
+    {
+      "title": "Consommez des légumineuses",
+      "description": "Pois chiches, lentilles et haricots fournissent des protéines végétales et des glucides complexes à IG bas."
+    },
+    {
+      "title": "Mangez un fruit après l’entraînement",
+      "description": "Une pomme ou une banane pour reconstituer rapidement les réserves de glycogène."
+    },
+    {
+      "title": "Incluez des œufs entiers",
+      "description": "Les œufs sont une source de protéines et de bonnes graisses, parfaits pour la prise de masse."
+    },
+    {
+      "title": "Surveillez vos portions",
+      "description": "Peser vos aliments pendant 1–2 semaines pour appréhender les quantités nécessaires à vos objectifs."
+    },
+    {
+      "title": "Prenez de la créatine",
+      "description": "3–5 g par jour de créatine monohydrate augmentent la force et la récupération."
+    },
+    {
+      "title": "Gérez vos cheat meals",
+      "description": "1 repas plaisir par semaine pour le moral, sans déraper sur tout le weekend."
+    },
+    {
+      "title": "Variez vos sources de protéines",
+      "description": "Alternez poulet, bœuf, poisson, tofu, œufs et protéines en poudre pour un profil d’acides aminés complet."
+    },
+    {
+      "title": "Ajoutez des épices brûle-graisses",
+      "description": "Gingembre, curcuma et piment peuvent légèrement booster le métabolisme."
+    },
+    {
+      "title": "Respectez vos heures de sommeil",
+      "description": "7–9 h de sommeil par nuit pour optimiser la sécrétion hormonale (GH, testostérone) et la récupération."
+    }
+  ],
+  "seche": [
+    {
+      "title": "Créez un léger déficit calorique",
+      "description": "Réduisez vos apports de 300–500 kcal/jour tout en maintenant un apport élevé en protéines pour conserver la masse musculaire."
+    },
+    {
+      "title": "Visez 2 g de protéines/kg de poids corporel",
+      "description": "Priorisez la satiété et la préservation musculaire : poulet, poisson, œufs, protéines végétales."
+    },
+    {
+      "title": "Réduisez les glucides simples",
+      "description": "Éliminez sodas, jus sucrés et confiseries. Privilégiez fruits à IG bas et légumes."
+    },
+    {
+      "title": "Faites 5 petits repas",
+      "description": "Fractionnez pour stabiliser la glycémie et éviter les coups de fatigue."
+    },
+    {
+      "title": "Mangez 400–500 g de légumes par jour",
+      "description": "Fibres, vitamines et hydratation, avec très peu de calories."
+    },
+    {
+      "title": "Buvez du thé vert",
+      "description": "3 tasses par jour peuvent légèrement augmenter la dépense énergétique."
+    },
+    {
+      "title": "Limitez les lipides",
+      "description": "Concentrez-vous sur 0,8–1 g/kg de bonnes graisses (avocat, huile d’olive) et réduisez les graisses saturées."
+    },
+    {
+      "title": "Pratiquez le jeûne intermittent",
+      "description": "Fenêtre alimentaire de 8 h avec 16 h de jeûne pour améliorer la sensibilité à l’insuline."
+    },
+    {
+      "title": "Hydratez-vous avant chaque repas",
+      "description": "1 verre d’eau 20 min avant le repas diminue l’appétit et facilite la digestion."
+    },
+    {
+      "title": "Intégrez du HIIT",
+      "description": "2–3 séances d’intervalle haute intensité brûlent plus de calories qu’une séance steady-state."
+    },
+    {
+      "title": "Conservez un réfeed hebdomadaire",
+      "description": "1 repas plus riche en glucides toute les 7–10 jours pour relancer le métabolisme sans sortir du déficit."
+    },
+    {
+      "title": "Surveillez votre balance hormonale",
+      "description": "Veillez à ne pas trop réduire les calories pour éviter la chute de testostérone et leptine."
+    },
+    {
+      "title": "Privilégiez la répartition des protéines",
+      "description": "40 % protéines, 40 % glucides, 20 % lipides pour un bon équilibre et une meilleure perte de gras."
+    },
+    {
+      "title": "Ajoutez des épices thermogéniques",
+      "description": "Poivre de Cayenne, gingembre et curcuma augmentent légèrement la dépense calorique."
+    },
+    {
+      "title": "Mangez lentement",
+      "description": "Prenez 20–30 min pour chaque repas pour mieux percevoir la satiété."
+    },
+    {
+      "title": "Utilisez un suppresseur d’appétit naturel",
+      "description": "Glucomannane, fibres de konjac ou psyllium pour réduire l’envie de grignoter."
+    },
+    {
+      "title": "Remplacez une collation par un shake protéiné",
+      "description": "Faible en calories, riche en protéines, rapide à préparer."
+    },
+    {
+      "title": "Suivez vos macros",
+      "description": "Appli comme MyFitnessPal pour rester précis sur vos apports et ajuster en temps réel."
+    },
+    {
+      "title": "Pratiquez le cardio à jeun",
+      "description": "30 min de cardio léger au réveil, à jeun, pour favoriser la lipolyse."
+    },
+    {
+      "title": "Planifiez vos repas",
+      "description": "Organisez vos menus à l’avance pour éviter les écarts et les tentations."
+    }
+  ]
+}
