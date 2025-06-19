@@ -31,7 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
         ImageView fullImage = findViewById(R.id.all);
         fullImage.setOnClickListener(v -> {
             SerieOfExercisesSingleton.getInstance().setType(ExercisesType.all);
-            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("")));
+            SerieOfExercisesSingleton.getInstance().setSerieOfExercises(new ArrayList<String>(Arrays.asList("hip-thrust-all","planks-all","pompes-all","rowing-barre-all","squate-all")));
             runSerie();
         });
 
