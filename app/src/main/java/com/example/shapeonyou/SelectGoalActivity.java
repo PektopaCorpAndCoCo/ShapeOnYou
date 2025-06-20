@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +31,18 @@ public class SelectGoalActivity extends AppCompatActivity {
             Intent i = new Intent(this, NutritionAdviceActivity.class);
             i.putExtra(EXTRA_GOAL, GOAL_SECHE);
             startActivity(i);
+        });
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
+        bottomNavigation.setSelectedItemId(R.id.nutrition);
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nutrition) {
+                Intent intent = new Intent(SelectGoalActivity.this, SelectGoalActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            }
+            return false;
         });
     }
 }

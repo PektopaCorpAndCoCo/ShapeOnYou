@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import android.content.Intent;
+import com.example.shapeonyou.DashboardActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,6 +45,16 @@ public class NutritionAdviceActivity extends AppCompatActivity {
         rvAdviceList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdviceAdapter(adviceList);
         rvAdviceList.setAdapter(adapter);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.nutrition);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.home) {
+                startActivity(new Intent(this, DashboardActivity.class));
+                return true;
+            }
+            return item.getItemId() == R.id.nutrition;
+        });
 
         // Récupère l'extra depuis l'Intent
         if (getIntent() != null && getIntent().hasExtra(SelectGoalActivity.EXTRA_GOAL)) {
