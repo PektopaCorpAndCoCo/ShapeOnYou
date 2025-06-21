@@ -36,7 +36,13 @@ public class SelectGoalActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setSelectedItemId(R.id.nutrition);
         bottomNavigation.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nutrition) {
+            int id = item.getItemId();
+            if (id == R.id.home) {
+                Intent intent = new Intent(SelectGoalActivity.this, DashboardActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nutrition) {
                 Intent intent = new Intent(SelectGoalActivity.this, SelectGoalActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

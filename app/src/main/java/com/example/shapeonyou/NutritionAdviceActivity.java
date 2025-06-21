@@ -49,11 +49,19 @@ public class NutritionAdviceActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.nutrition);
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.home) {
-                startActivity(new Intent(this, DashboardActivity.class));
+            int id = item.getItemId();
+            if (id == R.id.home) {
+                Intent intent = new Intent(this, DashboardActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nutrition) {
+                Intent intent = new Intent(this, SelectGoalActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 return true;
             }
-            return item.getItemId() == R.id.nutrition;
+            return false;
         });
 
         // Récupère l'extra depuis l'Intent
