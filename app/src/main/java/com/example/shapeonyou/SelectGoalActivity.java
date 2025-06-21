@@ -47,6 +47,11 @@ public class SelectGoalActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 return true;
+            } else if (id == R.id.profil) {
+                Intent intent = new Intent(SelectGoalActivity.this, ProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
             }
             return false;
         });
