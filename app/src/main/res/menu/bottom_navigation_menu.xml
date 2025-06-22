@@ -6,7 +6,7 @@
     <item
         android:id="@+id/favoris"
         android:icon="@drawable/ic_favorite"
-        android:title="favoris" />
+        android:title="home" />
 
     <item
         android:id="@+id/nutrition"
