@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
@@ -81,7 +82,28 @@ public class BodyPartActivity extends AppCompatActivity {
 
         populateUI(SerieOfExercisesSingleton.getInstance().getSerieOfExercisesPages());
 
-
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
+        bottomNavigation.setSelectedItemId(R.id.nutrition);
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.home) {
+                Intent intent = new Intent(BodyPartActivity.this, DashboardActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nutrition) {
+                Intent intent = new Intent(BodyPartActivity.this, SelectGoalActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.profil) {
+                Intent intent = new Intent(BodyPartActivity.this, ProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
 
 
     }
