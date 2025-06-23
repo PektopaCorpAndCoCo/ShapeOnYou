@@ -148,7 +148,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/buttons_gradient"
+        android:background="@drawable/button_background"
         android:text="Créer un compte"
         android:textAllCaps="false"
         android:textSize="18sp"
@@ -174,6 +174,7 @@
         android:id="@+id/btnLoginLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="Connexion"
         android:textSize="16sp"
         android:textStyle="bold"
