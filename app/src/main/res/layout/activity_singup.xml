@@ -143,12 +143,12 @@
     <!-- Bouton Créer un compte -->
 
     <!-- Texte "Déjà inscrit·e?" -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCreateAccount"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_background"
+        android:background="@drawable/buttons_gradient"
         android:text="Créer un compte"
         android:textAllCaps="false"
         android:textSize="18sp"
