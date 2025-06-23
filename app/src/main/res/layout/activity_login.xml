@@ -7,15 +7,17 @@
     android:background="@drawable/bg_gradient">
 
     <!-- 1. Bouton Connexion -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
         android:layout_marginTop="192dp"
         android:background="@drawable/button_background"
         android:text="connexion"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:elevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,13 +38,14 @@
     <!-- 3. Champ Email -->
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
+        android:layout_width="279dp"
+        android:layout_height="54dp"
         android:hint="Entrez votre e-mail"
         android:inputType="textEmailAddress"
         android:background="@drawable/edittext_background"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +58,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Mot de passe"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -62,14 +67,15 @@
     <!-- 5. Champ Mot de passe -->
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
+        android:layout_width="279dp"
+        android:layout_height="54dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_background"
         android:hint="Entrez votre mot de passe"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:elevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/tvPasswordLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -80,15 +86,15 @@
 
     <!-- 8. “Rejoins-nous” -->
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnForgot"
         android:layout_width="162dp"
         android:layout_height="53dp"
         android:layout_marginTop="100dp"
-        android:background="@null"
+        android:background="@drawable/button_background"
         android:text="Mot de passe oublié ?"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +104,7 @@
         android:id="@+id/tvSignupPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="290dp"
         android:text="Pas encore inscrit·e?"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +112,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,6 +120,8 @@
         android:text="Rejoins-nous"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:stateListAnimator="@null"
         app:layout_constraintBaseline_toBaselineOf="@id/tvSignupPrompt"
         app:layout_constraintEnd_toEndOf="parent" />
 

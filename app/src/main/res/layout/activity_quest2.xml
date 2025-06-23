@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:background="@drawable/bg_gradient" >
+    android:background="@drawable/button_background" >
 
     <!-- Titre de la question -->
     <TextView
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Option Débutant -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnOptionBeginner"
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -31,7 +31,7 @@
         android:text="Débutant"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/button_ques_background"
         android:elevation="4dp"
         android:stateListAnimator="@null"
         app:layout_constraintTop_toBottomOf="@id/tvQuestion"
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Option Intermédiaire -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnOptionIntermediate"
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -47,7 +47,7 @@
         android:text="Intermédiaire"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/button_ques_background"
         android:elevation="4dp"
         android:stateListAnimator="@null"
         app:layout_constraintTop_toBottomOf="@id/btnOptionBeginner"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Option Avancé -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnOptionAdvanced"
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -63,7 +63,7 @@
         android:text="Avancé"
         android:textSize="16sp"
         android:textColor="#000000"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/button_ques_background"
         android:elevation="4dp"
         android:stateListAnimator="@null"
         app:layout_constraintTop_toBottomOf="@id/btnOptionIntermediate"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Bouton Continuer -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnContinue"
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -80,7 +80,8 @@
         android:textAllCaps="false"
         android:textSize="18sp"
         android:textColor="#FFF"
-        android:background="@drawable/pill_bg"
+        android:elevation="4dp"
+        android:background="@drawable/buttons_gradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
