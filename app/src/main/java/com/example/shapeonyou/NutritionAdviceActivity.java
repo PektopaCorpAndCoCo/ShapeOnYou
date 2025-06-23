@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import android.content.Intent;
+import com.example.shapeonyou.DashboardActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,6 +45,29 @@ public class NutritionAdviceActivity extends AppCompatActivity {
         rvAdviceList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdviceAdapter(adviceList);
         rvAdviceList.setAdapter(adapter);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.nutrition);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.home) {
+                Intent intent = new Intent(this, DashboardActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nutrition) {
+                Intent intent = new Intent(this, SelectGoalActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.profil) {
+                Intent intent = new Intent(this, ProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
 
         // Récupère l'extra depuis l'Intent
         if (getIntent() != null && getIntent().hasExtra(SelectGoalActivity.EXTRA_GOAL)) {
