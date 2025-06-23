@@ -83,7 +83,7 @@ public class BodyPartActivity extends AppCompatActivity {
         populateUI(SerieOfExercisesSingleton.getInstance().getSerieOfExercisesPages());
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
-        bottomNavigation.setSelectedItemId(R.id.nutrition);
+        bottomNavigation.setSelectedItemId(R.id.home);
         bottomNavigation.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.home) {
