@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background">
+
+    <!-- Header -->
+    <include
+        android:id="@+id/include_header"
+        layout="@layout/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Conteneur centré verticalement/horizontalement -->
+    <LinearLayout
+        android:id="@+id/llCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/include_header"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Titre centré -->
+        <TextView
+            android:id="@+id/tvSelectGoalTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quel est ton objectif ?"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Espace sous le titre -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="24dp"/>
+
+        <!-- Pastille “Prise de masse” -->
+        <TextView
+            android:id="@+id/card_mass"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Prise de masse"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/advice_background"/>
+
+        <!-- Espace entre les pastilles -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="16dp"/>
+
+        <!-- Pastille “Sèche” -->
+        <TextView
+            android:id="@+id/card_cut"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Sèche"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/advice_background"/>
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

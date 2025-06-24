@@ -2,4 +2,27 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#80D8FF</color>
+    <color name="colorPrimaryDark">#4A148C</color>
+    <color name="colorAccent">#92FE9D</color>
+
+    <!-- Palette “pill-shape” -->
+    <color name="option_background">#80D8FF</color>
+    <color name="button_primary">#00695C</color>
+    <color name="button_secondary">#4A148C</color>
+    <color name="card_background">#FFFFFF</color>
+
+
+    <color name="purple">#9C47FF</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+
+    <!-- Autres nuances -->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#757575</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Gradient (si besoin) -->
+    <color name="gradient_start">#00C9FF</color>
+    <color name="gradient_end">#92FE9D</color>
 </resources>
